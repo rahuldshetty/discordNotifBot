@@ -28,8 +28,10 @@ async def on_message(message):
         if lis[1] == "gway":
             temp_chan = lis[2]
             channel = client.get_channel(temp_chan[2:len(temp_chan)-1])
-            name = lis[3]
-            link = lis[4]
+            name = ""
+            for i in range(3,len(lis)-1):
+                name = name + " " + lis[i]
+            link = lis[len(lis)-1]
             await client.send_message(channel,"@everyone Giveaway Game {} : {} ".format(name,link))
             
 
