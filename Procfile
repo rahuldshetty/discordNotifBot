@@ -1,0 +1,1 @@
+worder: python bot.py 
