@@ -1,10 +1,11 @@
 import discord
+import random
 from discord.ext import commands
 #
 #
 #   Format
 # !bot gway #channel name link ======= msg:"@everyone Giveaway Game name : link  " 
-#
+# !bot random begin last
 client = commands.Bot(command_prefix='!bot')
 
 @client.event
@@ -18,6 +19,11 @@ async def on_message(message):
     if content.startswith("!bot"):
         lis=content.split()
 
+        if lis[1] == "random":
+            f=int(lis[2])
+            s=int(lis[3])
+            channel = message.channel
+            await client.send_message(channel,"Random Number : {} ".format(random.randint(f,s)))
 
         if lis[1] == "gway":
             temp_chan = lis[2]
