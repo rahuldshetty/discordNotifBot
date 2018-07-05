@@ -1,5 +1,6 @@
 import discord
 import random
+from config import token
 from discord.ext import commands
 #
 #
@@ -35,4 +36,4 @@ async def on_message(message):
             await client.send_message(channel,"@everyone Giveaway Game {} : {} ".format(name,link))
             
 
-client.run("NDYxMjI0ODAwNDcyMjY4ODM1.DhQSow.Rn5POOKonqUfs5CuMxLoH9GUMmY")
+client.run(token)
