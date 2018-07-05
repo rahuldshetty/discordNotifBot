@@ -1,6 +1,6 @@
 import discord
 import random
-from config import token
+from data.config import token
 from discord.ext import commands
 #
 #
